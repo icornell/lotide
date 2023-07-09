@@ -1,8 +1,23 @@
-const assertEqual = require('../assertEqual.js');
-const head = require('../head.js');
+const assert = require('chai').assert;//refactored with Chai and Mocha
+const head = require('../head');
 
-//test the code:
-assertEqual(head([5,6,7]), 5);//should pass
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");//should pass
-assertEqual(head([]));//should pass as both are undefined
-assertEqual(head([1]));//should pass
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+  it("returns '5' for ['5']", () => {
+    assert.strictEqual(head(['5']), '5');
+  });
+  it("returns '5' for [5, 6 ,7]", () => {
+    assert.strictEqual(head([5, 6, 7]), 5);
+  });
+  it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+  });
+  it("returns undefined for []", () => {
+    assert.strictEqual(head([]), undefined);
+  });
+  it("returns 1 for [1]", () => {
+    assert.strictEqual(head([1]), 1);
+  });
+});
