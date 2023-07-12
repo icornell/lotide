@@ -15,11 +15,11 @@ const countLetters = function(sentence) {
     } else {
       resultCount[separateLetters] = 1;//if not, count the letter and move on
     }
-  } console.log(resultCount);//display the results
+  } return resultCount;//display the results
 };
 
 //test code:
-countLetters("testing the code");
-countLetters("lighthouse labs");
-countLetters("meaning of life");
-countLetters("forty-two");
+console.log(countLetters("testing the code"));
+console.log(countLetters("lighthouse labs"))
+console.log(countLetters("meaning of life"));
+console.log(countLetters("forty-two"));

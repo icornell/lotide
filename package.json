@@ -2,7 +2,7 @@
   "name": "@icornell/lotide",
   "version": "1.0.0",
   "description": "A library of various functions based on lodash for Lighthouse Labs Web Development Bootcamp",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
