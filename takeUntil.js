@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -11,7 +11,7 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const assertArraysEqual = function(eqArrays) {
+const assertArraysEqual = function (eqArrays) {
   if (eqArrays === false) {
     console.log(`🛑These arrays are not equal`);
   } else {
@@ -21,25 +21,38 @@ const assertArraysEqual = function(eqArrays) {
 
 //return a slice of the array with elements taken from the beginning until the callback returns a truthy value
 
-const takeUntil = function(array, callback) {//create the function
-  let resultArray = [];//create the new array for the results
-  for (let element of array) {//for loop to look through each element of the array
-    if (!callback(element)) {//if the callback does not equal the element of the callback we are stopping the loop at
-      resultArray.push(element);//push that element to the new array and continue to run through the loop
+const takeUntil = function (array, callback) {
+  //create the function
+  let resultArray = []; //create the new array for the results
+  for (let element of array) {
+    //for loop to look through each element of the array
+    if (!callback(element)) {
+      //if the callback does not equal the element of the callback we are stopping the loop at
+      resultArray.push(element); //push that element to the new array and continue to run through the loop
     } else {
-      return resultArray;//return the final results array thus ending the for loop
+      return resultArray; //return the final results array thus ending the for loop
     }
   }
 };
 //test code
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
+const results1 = takeUntil(data1, (x) => x < 0);
 console.log(results1);
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
-console.log('---');
+console.log("---");
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
+const data2 = [
+  "I've",
+  "been",
+  "to",
+  "Hollywood",
+  ",",
+  "I've",
+  "been",
+  "to",
+  "Redwood",
+];
+const results2 = takeUntil(data2, (x) => x === ",");
 console.log(results2);
-assertArraysEqual(results2, ["I've", 'been', 'to', 'Hollywood']);
+assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);

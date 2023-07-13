@@ -5,7 +5,7 @@ An array to map
 A callback function
 The map function will return a new array based on the results of the callback function.
 */
-const assertArraysEqual = function(eqArrays) {
+const assertArraysEqual = function (eqArrays) {
   if (eqArrays === false) {
     console.log(`🛑These arrays are not equal`);
   } else {
@@ -13,7 +13,7 @@ const assertArraysEqual = function(eqArrays) {
   }
 };
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -26,9 +26,9 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const words = ["So", "long", "and", "thanks", "for", "all", "the", "fish"];//add a collection of words to your map file:
+const words = ["So", "long", "and", "thanks", "for", "all", "the", "fish"]; //add a collection of words to your map file:
 
-const map = function(array, callback) {
+const map = function (array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -36,13 +36,22 @@ const map = function(array, callback) {
   return results;
 };
 
-const results1 = map(words, word => word[0]);
+const results1 = map(words, (word) => word[0]);
 console.log(results1);
 
-const results2 = map(words, word => word.length);
+const results2 = map(words, (word) => word.length);
 console.log(results2);
 assertArraysEqual(results2, [2, 4, 3, 6, 3, 3, 3, 4]);
 
-const results3 = map(words, word => word);
+const results3 = map(words, (word) => word);
 console.log(results3);
-assertArraysEqual(results3, ["So", "long", "and", "thanks", "for", "all", "the", "fish"]);
+assertArraysEqual(results3, [
+  "So",
+  "long",
+  "and",
+  "thanks",
+  "for",
+  "all",
+  "the",
+  "fish",
+]);
