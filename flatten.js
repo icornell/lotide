@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -10,7 +10,7 @@ const eqArrays = function(array1, array2) {
     return true;
   }
 };
-const assertArraysEqual = function(eqArrays) {
+const assertArraysEqual = function (eqArrays) {
   if (eqArrays === false) {
     console.log(`🛑These arrays are not equal`);
   } else {
@@ -23,7 +23,7 @@ const assertArraysEqual = function(eqArrays) {
 //only need to handle one level of nesting
 //use array.concat to concatenate the arrays together and array.push to add the new elements from the old array
 // eg: flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
-const flatten = function(oldArray) {
+const flatten = function (oldArray) {
   let newArray = [];
   for (let i = 0; i < oldArray.length; i++) {
     let newElement = oldArray[i];
@@ -32,6 +32,7 @@ const flatten = function(oldArray) {
     } else {
       newArray.push(newElement);
     }
-  } return newArray;
+  }
+  return newArray;
 };
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
