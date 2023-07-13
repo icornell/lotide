@@ -1,7 +1,4 @@
-//reminder - if nothing happens (i.e. true), all good! otherwise error message in console
-//function implementation:
-
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -10,5 +7,4 @@ const assertEqual = function(actual, expected) {
 };
 //test code for assertEqual function moved to test/assertEqualTest.js
 
-
-module.exports = assertEqual;//refactoring to export assertEqual function
+module.exports = assertEqual; //refactoring to export assertEqual function

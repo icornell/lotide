@@ -7,7 +7,7 @@ const assertArraysEqual = function (actual, expected) {
     return false;
   } else {
     console.log(`✅These arrays are equal`);
-    return true
+    return true;
   }
 };
 
