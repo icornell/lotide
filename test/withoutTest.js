@@ -1,6 +1,5 @@
 const without = require("../without");
 const assert = require("chai").assert;
-//const words = ["hello", "world", "lighthouse"];
 
 describe("#without", () => {
   it("returns [2, 3] for [1, 2, 3], [1]", () => {
