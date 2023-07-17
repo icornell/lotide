@@ -1,15 +1,19 @@
 //inplement a function which takes two arrays and returns true or false, dependant on a perfect match
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
-      }
-    }
-    return true;
   }
+  for (let i = 0; i < array1.length; i++) {
+    if (Array.isArray(array1[i]) && (eqArrays(array1[i], array2[i]) === false)) {
+      // if it is an array && the arrays are not equal using recursion then return false;
+      return false;
+    }
+    if (!(Array.isArray(array1[i])) && array1[i] !== array2[i]) {
+      // if it is not an array and the items are not equal then return false
+      return false;
+    }
+  } 
+  return true;
 };
 //test cases moved to test/eqArraysTest.js
 
