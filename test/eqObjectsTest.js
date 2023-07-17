@@ -31,4 +31,14 @@ describe("#eqObjects", () => {
     const abc = 1;
     assert.isFalse(eqObjects(ab, abc));
   });
+  it("returns true for two objects with nested objects having the same keys", () => {
+    const cd = { c: "1", d: ["2", 3] };
+    const dc = { d: ["2", 3], c: "1" };
+    assert.isTrue(eqObjects(cd, dc));
+  });
+  it("returns false for two objects with nested objects having different keys", () => {
+    const cd = { c: "1", d: ["2", 3] };
+    const dc = { d: ["2", 3], c: "1", e: "2" };
+    assert.isFalse(eqObjects(cd, dc));
+  });
 });
