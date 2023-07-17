@@ -1,6 +1,6 @@
 {
   "name": "@icornell/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library of various functions based on lodash for Lighthouse Labs Web Development Bootcamp",
   "main": "index.js",
   "directories": {
