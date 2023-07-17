@@ -1,5 +1,4 @@
 // Create a function that returns the first element of an array
-const assertEqual = require("./assertEqual"); //importing assertEqual function
 const head = function (array) {
   return array[0];
 };

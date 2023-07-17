@@ -1,6 +1,5 @@
 const eqObjects = require("./eqObjects");
 
-// FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function (actual, expected) {
   const inspect = require("util").inspect; // <= add this line
   if (eqObjects(actual, expected)) {
