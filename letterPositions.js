@@ -1,24 +1,3 @@
-const eqArrays = function (array1, array2) {
-  //asked to insert eqArrays here
-  if (array1.length !== array2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      if (array1[i] !== array2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
-const assertArraysEqual = function (eqArrays) {
-  //asked to insert assertArraysEqual here
-  if (eqArrays === false) {
-    console.log(`🛑These arrays are not equal`);
-  } else {
-    console.log(`✅These arrays are equal`);
-  }
-};
 const letterPositions = function (sentence) {
   const results = {}; //return an object
   for (let i = 0; i < sentence.length; i++) {
@@ -35,7 +14,6 @@ const letterPositions = function (sentence) {
   }
   return results;
 };
-//test code
-console.log(letterPositions("hello"));
-console.log(letterPositions("how are you"));
-assertArraysEqual(letterPositions("hello"), [1]);
+//test code moved to test/letterPositionsTest.js
+
+module.exports = letterPositions;
